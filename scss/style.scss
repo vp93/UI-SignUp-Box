@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Ovo);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+*{
+  font-family:'Montserrat';
+}
+
+@mixin centre($axis: "both"){
+    position:absolute;
+    @if $axis == "y"{
+        top:50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    @if $axis == "both"{
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }   
+}
+
+.account {
+  height:auto;
+  width:800px;
+  border:1px solid #c7c7c7;
+  border-radius:25px;
+  // background-color: #171f44;
+  display: inline-block;
+  @include centre;
+  .content {
+  float:left;
+  width:50%;
+  height:100%;
+  padding:60px;
+
+  box-sizing: border-box;
+  }
+  .slider {
+  height:450px;
+  width:50%;
+  box-shadow:0px 0px 5px 0px  #2e2e2e;
+  background-color:white;
+  margin: 0px 30px;
+  @include centre(y);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    h2 {
+    color:#2E334A;
+    }
+    p {
+    margin:0px;
+    }
+    .login {
+    position:absolute;
+    top:-20px;
+    left:0;
+    width:100%;
+    padding:60px;
+    box-sizing: border-box;
+    visibility:hidden;
+    }
+    .signup {
+    position:absolute;
+    top:-20px;
+    left:0;
+    padding:60px;
+    box-sizing: border-box;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color:#B7B8BF;
+  font-weight: 400;
+}
+
+h2 {
+   color: #fff;
+   font-family: 'Montserrat', serif;
+   font-size:30px;
+   margin-bottom: 16px;
+}
+
+p {
+    color: #B7B8BF;
+    font: 18px;
+    font-weight: 300;
+}
+
+.background {
+  height:100%;
+  width:100%;
+  position: absolute; 
+  background: url(https://images.pexels.com/photos/936132/pexels-photo-936132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center   center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  margin:0px;
+  padding:0px;
+  font-family: 'Muli', sans-serif;
+}
+
